@@ -9,11 +9,11 @@ import { Subscription }       from 'rxjs/Subscription';
 
 @Component({
     template: `
-  <h2>HEROES</h2>
+  <h2>User</h2>
   <div *ngIf="user">
     <h3>"{{user.name}}"</h3>
     <div>
-      <label>Id: </label>{{user.id}}</div>
+      <label>Id: </label>{{user.uuid}}</div>
     <div>
       <label>Name: </label>
       <input [(ngModel)]="user.name" placeholder="name"/>
@@ -36,7 +36,7 @@ export class UserDetailComponent implements OnInit, OnDestroy  {
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
-            let id = +params['id']; // (+) converts string 'id' to a number
+            let id = +params['uuid']; // (+) converts string 'id' to a number
             this.service.getUser(id).then(user => this.user = user);
         });
     }
