@@ -11,8 +11,12 @@ const userManagement: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'user/:id',
-        component: './components/users/user-detail.component'
+        path: 'users',
+        children: [
+            {
+                path: ':id', component: './components/users/user-detail.component'
+            }
+        ]
     },
     {
         path: '**',

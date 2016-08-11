@@ -8,7 +8,8 @@ import { FormsModule }    from '@angular/forms';
 import { AppComponent }       from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
 
-import { UsersModule } from './components/users/users.module';
+import { UsersModule } from './components/users';
+import { TopicsModule } from "./components/topics";
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { UsersModule } from './components/users/users.module';
         BrowserModule,
         FormsModule,
         routing,
-        UsersModule
+        UsersModule,
+        TopicsModule
     ],
     declarations: [
         AppComponent,

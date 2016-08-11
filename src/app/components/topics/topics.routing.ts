@@ -2,13 +2,11 @@
  * Created by Martin on 11/08/16.
  */
 import { Routes, RouterModule } from '@angular/router';
+import { TopicListComponent, TopicDetailComponent }    from './';
 
-import { UserListComponent }    from './topic-list.component';
-import { TopicDetailComponent }  from './topic-detail.component';
-
-const usersRoutes: Routes = [
-    { path: 'topics',  component: UserListComponent },
-    { path: 'user/:uuid', component: TopicDetailComponent }
+const topicsRoutes: Routes = [
+    { path: 'topics',  component: TopicListComponent },
+    { path: 'topics/:uuid', component: TopicDetailComponent }
 ];
 
-export const usersRouting = RouterModule.forChild(usersRoutes);
+export const topicsRouting = RouterModule.forChild(topicsRoutes);

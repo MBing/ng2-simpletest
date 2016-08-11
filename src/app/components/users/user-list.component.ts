@@ -9,12 +9,11 @@ import { Subscription }       from 'rxjs/Subscription';
 
 @Component({
     template: `
-    <h2>Users</h2>
     <ul class="items">
       <li *ngFor="let user of users"
         [class.selected]="isSelected(user)"
         (click)="onSelect(user)">
-        <span class="badge">{{user.uuid}}</span> {{user.name}}
+        {{user.name}}
       </li>
     </ul>
   `
@@ -47,7 +46,7 @@ export class UserListComponent implements OnInit, OnDestroy {
     isSelected(user: User) { return user.uuid === this.selectedId; }
 
     onSelect(user: User) {
-        this.router.navigate(['/user', user.uuid]);
+        this.router.navigate(['/users', user.uuid]);
     }
 
 }

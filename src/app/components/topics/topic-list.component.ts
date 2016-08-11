@@ -4,7 +4,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { Topic, TopicService }  from './topic.service';
+import { Topic, TopicService }  from './';
 import { Subscription }       from 'rxjs/Subscription';
 
 @Component({
@@ -19,7 +19,7 @@ import { Subscription }       from 'rxjs/Subscription';
     </ul>
   `
 })
-export class UserListComponent implements OnInit, OnDestroy {
+export class TopicListComponent implements OnInit, OnDestroy {
     topics: Topic[];
 
     private selectedId: number;

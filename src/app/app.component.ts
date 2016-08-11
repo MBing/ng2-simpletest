@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     selector: 'app',
     template: `
     <nav>
-      <a routerLink="/users" routerLinkActive="active">Users</a>
+      <!--<a routerLink="/users" routerLinkActive="active">Users</a>-->
     </nav>
     <router-outlet></router-outlet>
   `

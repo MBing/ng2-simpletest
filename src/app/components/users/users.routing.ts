@@ -3,12 +3,19 @@
  */
 import { Routes, RouterModule } from '@angular/router';
 
-import { UserListComponent }    from './user-list.component';
-import { UserDetailComponent }  from './user-detail.component';
+import { UserListComponent, UserDetailComponent } from './';
+import { TopicListComponent }  from '../topics';
 
 const usersRoutes: Routes = [
-    { path: 'users',  component: UserListComponent },
-    { path: 'user/:uuid', component: UserDetailComponent }
+    {
+        path: 'users',
+        component: UserListComponent,
+        children: [
+            { path: ':uuid', component: TopicListComponent },
+            { path: '', component: UserDetailComponent }
+        ]
+    },
+
 ];
 
 export const usersRouting = RouterModule.forChild(usersRoutes);
