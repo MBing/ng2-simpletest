@@ -9,7 +9,7 @@ import { AppComponent }       from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
 
 import { UsersModule } from './components/users';
-import { TopicsModule } from "./components/topics";
+import { TopicsModule } from './components/topics';
 
 
 @NgModule({
