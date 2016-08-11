@@ -5,18 +5,20 @@ import { NgModule }       from '@angular/core';
 import { CommonModule }   from '@angular/common';
 import { FormsModule }    from '@angular/forms';
 
-import { UserListComponent }    from './user-list.component';
-import { UserDetailComponent }  from './user-detail.component';
+import {    UserListComponent,
+            UserDetailComponent,
+            UserService,
+            usersRouting
+        }    from './';
 
-import { UserService } from './user.service';
-
-import { usersRouting } from './users.routing';
+import { TopicListComponent } from '../topics';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        usersRouting
+        usersRouting,
+        TopicListComponent
     ],
     declarations: [
         UserListComponent,
