@@ -19,7 +19,7 @@ import { Subscription }       from 'rxjs/Subscription';
       <input [(ngModel)]="user.name" placeholder="name"/>
     </div>
     <p>
-      <button (click)="gotoUseres()">Back</button>
+      <button (click)="gotoUsers()">Back</button>
     </p>
   </div>
   `
