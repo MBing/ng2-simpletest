@@ -10,8 +10,12 @@ export const ROUTES: RouterConfig = [
         component: Main,
         children: [
             {
-                path: '',
-                // component: Notes
+                path: 'users',
+                component: User
+            },
+            {
+                path: 'users/:uuid',
+                component: User
             }
         ]
     },
