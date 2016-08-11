@@ -49,13 +49,6 @@ export class UserDetailComponent implements OnInit, OnDestroy  {
         let userId = this.user ? this.user.uuid : null;
         // Pass along the user id if available
         // so that the UserList component can select that user.
-        this.router.navigate(['/users', { uuid: userId, foo: 'foo' }]);
+        this.router.navigate(['/users']);
     }
 }
-
-
-/*
- Copyright 2016 Google Inc. All Rights Reserved.
- Use of this source code is governed by an MIT-style license that
- can be found in the LICENSE file at http://angular.io/license
- */
