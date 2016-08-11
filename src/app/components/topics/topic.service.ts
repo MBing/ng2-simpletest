@@ -11,7 +11,7 @@ let Topics = [
     new Topic(1, 'Write Mail'),
     new Topic(2, 'Details'),
     new Topic(3, 'Profile'),
-    new Topic(3, 'Help'),
+    new Topic(4, 'Help'),
 ];
 
 let topicPromise = Promise.resolve(Topics);

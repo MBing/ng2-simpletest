@@ -14,7 +14,7 @@ import { Subscription }       from 'rxjs/Subscription';
       <li *ngFor="let topic of topics"
         [class.selected]="isSelected(topic)"
         (click)="onSelect(topic)">
-        <span class="badge">{{topic.id}}</span> {{topic.name}}
+        <span class="badge">{{topic.uuid}}</span> {{topic.name}}
       </li>
     </ul>
   `
@@ -34,7 +34,7 @@ export class TopicListComponent implements OnInit, OnDestroy {
         this.sub = this.route
             .params
             .subscribe(params => {
-                this.selectedId = +params['id'];
+                this.selectedId = +params['uuid'];
                 this.service.getTopics()
                     .then(topics => this.topics = topics);
             });

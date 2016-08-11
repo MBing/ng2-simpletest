@@ -9,7 +9,7 @@ import { Subscription }       from 'rxjs/Subscription';
 
 @Component({
     template: `
-  <h2>HEROES</h2>
+  <h2>Topics</h2>
   <div *ngIf="topic">
     <h3>"{{topic.name}}"</h3>
     <div>
@@ -36,7 +36,7 @@ export class TopicDetailComponent implements OnInit, OnDestroy  {
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
-            let id = +params['id']; // (+) converts string 'id' to a number
+            let id = +params['uuid']; // (+) converts string 'id' to a number
             this.service.getTopic(id).then(user => this.topic = user);
         });
     }
@@ -49,6 +49,6 @@ export class TopicDetailComponent implements OnInit, OnDestroy  {
         let topicId = this.topic ? this.topic.uuid : null;
         // Pass along the topic id if available
         // so that the TopicList component can select that topic.
-        this.router.navigate(['/topics', { uuid: topicId, foo: 'foo' }]);
+        this.router.navigate(['/topics']);
     }
 }
