@@ -4,5 +4,5 @@
 export { Topic, TopicService } from './topic.service';
 export { TopicListComponent } from './topic-list.component';
 export { TopicDetailComponent } from './topic-detail.component';
-export { TopicsModule } from './topics.module';
 export { topicsRouting } from './topics.routing';
+export { TopicsModule } from './topics.module';

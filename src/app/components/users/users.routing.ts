@@ -4,7 +4,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { UserListComponent, UserDetailComponent } from './';
-import { TopicListComponent }  from '../topics';
+import { TopicListComponent } from '../topics';
 
 const usersRoutes: Routes = [
     {
