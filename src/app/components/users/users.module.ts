@@ -24,6 +24,10 @@ import { TopicListComponent } from '../topics';
         UserListComponent,
         UserDetailComponent
     ],
+    exports: [
+        UserListComponent,
+        UserDetailComponent
+    ],
     providers: [
         UserService
     ]

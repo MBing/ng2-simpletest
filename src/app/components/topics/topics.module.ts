@@ -22,6 +22,10 @@ import {
         TopicListComponent,
         TopicDetailComponent
     ],
+    exports: [
+        TopicListComponent,
+        TopicDetailComponent
+    ],
     providers: [
         TopicService
     ]
